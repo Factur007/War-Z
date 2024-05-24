@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 5f;
+    public float gravite = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,9 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
+        move.y -= gravite;
 
         controller.Move(move * speed * Time.deltaTime);
+
     }
 }

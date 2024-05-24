@@ -19,8 +19,5 @@ public class Wrag : MonoBehaviour
     void Update()
     {
         agent.SetDestination(player.position);
-
-
-
     }
 }
