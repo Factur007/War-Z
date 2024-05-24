@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject enemyPrefab; // префаб врага
-    public int numberOfEnemies; // количество врагов для создания
-    public float spawnRadius; // радиус спауна
+    public GameObject enemyPrefab; 
+    public int numberOfEnemies;
+    public float zRandValue = 5;
+    public float xRandValue = 5;
+
     void Start()
     {
-        {
-            SpawnEnemies();
-        }
+        
+        SpawnEnemies();
+        
     }
 
     void SpawnEnemies()
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Vector3 randomPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+            Vector3 randomPosition = new Vector3(Random.Range( -xRandValue, xRandValue), 0, Random.Range( -zRandValue,zRandValue));    
             GameObject newEnemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
         }
     }
