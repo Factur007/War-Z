@@ -20,7 +20,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Vector3 randomPosition = new Vector3(Random.Range( -xRandValue, xRandValue), 0, Random.Range( -zRandValue,zRandValue));    
+            Vector3 randomPosition = new Vector3(Random.Range( -xRandValue, xRandValue), 0, Random.Range( -zRandValue,zRandValue)) + transform.position;    
             GameObject newEnemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
         }
     }
