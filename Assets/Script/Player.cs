@@ -26,5 +26,14 @@ public class Player : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 7;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = 5;
+        }
+
     }
 }
