@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    
+
     [SerializeField] protected int health;
 
     // Start is called before the first frame update
     void Start()
     {
         HealthEnemy(100);
-        
     }
 
     public void HealthEnemy(int coint)

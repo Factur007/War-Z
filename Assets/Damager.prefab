@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3824012347860920643}
   - component: {fileID: 7531723663870688255}
   - component: {fileID: 4806972703714658832}
+  - component: {fileID: 6984101547515812228}
   m_Layer: 0
   m_Name: Damager
   m_TagString: Enemy
@@ -181,6 +182,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1.3099451}
   m_Center: {x: 0, y: 0, z: 0.15497252}
+--- !u!114 &6984101547515812228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778855480782337249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443fd8596050b36498f27008b26fc5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &8773435142646315395
 GameObject:
   m_ObjectHideFlags: 0
